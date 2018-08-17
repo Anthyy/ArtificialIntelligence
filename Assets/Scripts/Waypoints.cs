@@ -64,7 +64,9 @@ public class Waypoints : MonoBehaviour
 
     void Seek()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed);
+        //transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed); // The agent will go through obstacles to get to the target
+        agent.SetDestination(target.position); // The agent finds a way AROUND obstacles to get to the target
+
         float distToTarget = Vector3.Distance(transform.position, target.position);
         if (distToTarget > seekRadius)
         {
