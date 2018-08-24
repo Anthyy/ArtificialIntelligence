@@ -42,7 +42,7 @@ namespace Intro // Namespaces are used so that Scripts can be categorised differ
 
         void Patrol()
         {
-            Transform point = waypoints[currentIndex];
+            Transform point = waypoints[currentIndex]; // so you can actually declare variables inside a function as well (except they'll only be able to be used inside that specific function and will unable to be referenced outside of it)
             float distance = Vector3.Distance(transform.position, point.position);
             if (distance < stoppingDistance)
             {

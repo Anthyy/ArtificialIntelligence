@@ -15,7 +15,7 @@ namespace SteeringBehaviours
         // FixedUpdate is called at a specific frame
         void FixedUpdate()
         {
-            if(GetKey.MouseButtonDown(0))
+            //if (Input.GetMouseButton(0)) // You don't use "GetKey." here because the mouse buttons aren't keys
             Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(camRay, out hit, 1000f))
