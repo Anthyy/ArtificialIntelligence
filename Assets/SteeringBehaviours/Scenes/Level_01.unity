@@ -3562,6 +3562,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 85757526}
   m_Mesh: {fileID: 4301500, guid: 642208694b02a9b478db16deee576a7f, type: 3}
+--- !u!1 &86779794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86779795}
+  m_Layer: 0
+  m_Name: Zombies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &86779795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86779794}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.660861, y: -0.63333225, z: -5.2742395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1473016603}
+  m_Father: {fileID: 110458247}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &87076710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4847,10 +4876,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1473016603}
-  - {fileID: 1069356180}
+  - {fileID: 484020603}
+  - {fileID: 86779795}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114024756
 GameObject:
@@ -22544,7 +22573,7 @@ Transform:
   m_Children:
   - {fileID: 1205901681}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475180211
 GameObject:
@@ -22986,6 +23015,35 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: 642208694b02a9b478db16deee576a7f, type: 3}
+--- !u!1 &484020602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 484020603}
+  m_Layer: 0
+  m_Name: Archers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &484020603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484020602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1069356180}
+  m_Father: {fileID: 110458247}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485725898
 GameObject:
   m_ObjectHideFlags: 0
@@ -31062,35 +31120,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4301896, guid: 642208694b02a9b478db16deee576a7f, type: 3}
---- !u!1 &643216303
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 643216304}
-  m_Layer: 0
-  m_Name: ThirdParty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &643216304
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643216303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 789559790}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644446257
 GameObject:
   m_ObjectHideFlags: 0
@@ -35373,7 +35402,7 @@ Transform:
   - {fileID: 1284998047}
   - {fileID: 1605208056}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728382891
 GameObject:
@@ -39139,52 +39168,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300012, guid: 642208694b02a9b478db16deee576a7f, type: 3}
---- !u!1 &789559789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 789559790}
-  - component: {fileID: 789559791}
-  m_Layer: 0
-  m_Name: GizmosGL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &789559790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 789559789}
-  m_LocalRotation: {x: -0, y: -0, z: 9.3132246e-10, w: 1}
-  m_LocalPosition: {x: 6.5462437, y: -4.958202, z: -1.6126156}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 643216304}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &789559791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 789559789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -646753635, guid: f2518f47af8edf149b208062d0f8d8f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isVisible: 1
-  globalScaleFactor: 1
-  isCollisionEnabled: 0
-  isRigidbodyEnabled: 0
-  gizmosHideFlags: 1
-  material: {fileID: 0}
 --- !u!1 &792187774
 GameObject:
   m_ObjectHideFlags: 0
@@ -53554,8 +53537,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1351229576}
-  m_Father: {fileID: 110458247}
-  m_RootOrder: 1
+  m_Father: {fileID: 484020603}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069547650
 GameObject:
@@ -73861,19 +73844,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 110458247}
+    m_TransformParent: {fileID: 86779795}
     m_Modifications:
     - target: {fileID: 4547834855378564, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.32
+      value: -13.980861
       objectReference: {fileID: 0}
     - target: {fileID: 4547834855378564, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 5.8833323
       objectReference: {fileID: 0}
     - target: {fileID: 4547834855378564, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -29.29
+      value: -24.015762
       objectReference: {fileID: 0}
     - target: {fileID: 4547834855378564, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
       propertyPath: m_LocalRotation.x
@@ -73918,6 +73901,10 @@ Prefab:
     - target: {fileID: 4790753842130200, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620118080360608, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
+      propertyPath: m_Name
+      value: Zombie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd3fb13f3d9ab4408b20b235bdab0ef, type: 2}
@@ -94642,7 +94629,7 @@ Transform:
   m_Children:
   - {fileID: 919199007}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 26.291, y: 226.597, z: 10.22}
 --- !u!1 &1864261482
 GameObject:
@@ -99457,7 +99444,7 @@ GameObject:
   - component: {fileID: 1954744970}
   - component: {fileID: 1954744967}
   m_Layer: 0
-  m_Name: Skeleton_Archer
+  m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
