@@ -43,6 +43,7 @@ namespace Intro // Namespaces are used so that Scripts can be categorised differ
         void Patrol()
         {
             Transform point = waypoints[currentIndex]; // so you can actually declare variables inside a function as well (except they'll only be able to be used inside that specific function and will unable to be referenced outside of it)
+
             float distance = Vector3.Distance(transform.position, point.position);
             if (distance < stoppingDistance)
             {
@@ -53,10 +54,9 @@ namespace Intro // Namespaces are used so that Scripts can be categorised differ
                     currentIndex = 1;
                 }
             }
-
-            agent.SetDestination(point.position); // Goes around objects to seek target
-                                                  //transform.position = Vector3.MoveTowards(transform.position, point.position, moveSpeed); // Goes through objects to seek target
-
+            transform.position = Vector3.MoveTowards(transform.position, point.position, moveSpeed); // Goes through objects to seek target
+            // agent.SetDestination(point.position); // Goes around objects to seek target
+                                                  
             float distToTarget = Vector3.Distance(transform.position, point.position);
             if (distToTarget < seekRadius)
             {
@@ -66,9 +66,7 @@ namespace Intro // Namespaces are used so that Scripts can be categorised differ
 
         void Seek()
         {
-            //transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed); // The agent will go through obstacles to get to the target
-            agent.SetDestination(target.position); // The agent finds a way AROUND obstacles to get to the target
-
+            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed); // The agent will go through obstacles to get to the target          
             float distToTarget = Vector3.Distance(transform.position, target.position);
             if (distToTarget > seekRadius)
             {
