@@ -15,7 +15,7 @@ namespace SteeringBehaviours
         public Vector3 velocity;
        
         private Vector3 force;
-        private List<SteeringBehaviour> behaviours;
+        private SteeringBehaviour[] behaviours;
         private NavMeshAgent agent;
 
         private void Awake()

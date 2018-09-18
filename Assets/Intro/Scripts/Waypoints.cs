@@ -86,22 +86,20 @@ namespace Intro // Namespaces are used so that Scripts can be categorised differ
             // Switch current state
             switch (currentState)
             {
+                // If we are in Patrol
                 case State.Patrol:
-                    // Patrol state
+                    // Call Patrol()
                     Patrol();
                     break;
+                // If we are in Seek
                 case State.Seek:
-                    // Seek state
+                    // Call Seek()
                     Seek();
                     break;
                 // Failsafe (if there is an error, default to default)
                 default:
                     break;
-            }
-            // If we are in Patrol
-            // Call Patrol()
-            // If we are in Seek
-            // Call Seek()
+            }           
         }
     }
 }
