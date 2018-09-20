@@ -11,25 +11,16 @@ namespace SteeringBehaviours
 
         public float weighting; // How much weighting does the behaviour have over other behaviours
         public AIAgent owner; // Reference to AIAgent owner of behavour
-        private void Awake()
+
+        // Awake runs regardless whether or not the GameObject is enabled
+        private void Awake() // Runs before Start
         {
-            
+            owner = GetComponent<AIAgent>();
         }
         public virtual Vector3 GetForce()
         {
             return Vector3.zero;
-        }
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        }       
     }
 }  
     

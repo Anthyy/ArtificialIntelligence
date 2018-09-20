@@ -10,7 +10,7 @@ namespace SteeringBehaviours
     public class AIAgentDirector : MonoBehaviour
     {
 
-        public AIAgent agent;
+        public AIAgent[] agents;
         public Transform placeholderPoint;
         private void OnDrawGizmosSelected()
         {
@@ -25,24 +25,28 @@ namespace SteeringBehaviours
         // FixedUpdate is called at a specific frame
         void FixedUpdate()
         {
-            if (Input.GetMouseButtonDown(0)) // You don't use "GetKey." here because the mouse buttons aren't keys
+            foreach(var agent in agents)
             {
-                // Try to get seek component on agent
-                Seek seek = agent.GetComponent<Seek>();
-                // if seek is not null
-                if (seek)
+                if (Input.GetMouseButtonDown(0)) // You don't use "GetKey." here because the mouse buttons aren't keys
                 {
                     Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
                     RaycastHit hit;
                     if (Physics.Raycast(camRay, out hit, 1000f))
                     {
+                        // Try to get seek component on agent
+                        Seek seek = agent.GetComponent<Seek>();
+                        Flee flee = agent.GetComponent<Flee>();
                         // Update the transform's position
                         placeholderPoint.position = hit.point;
-                        // Update seek's target (which you might not need to do)
-                        seek.target = placeholderPoint;
+
+                        if (seek)
+                            // Update seek's target (which you might not need to do)
+                            seek.target = placeholderPoint;
+
+                        if (flee)
+                            flee.target = placeholderPoint;
                     }
-                }
-               
+                }                                        
             }
         }
     }
